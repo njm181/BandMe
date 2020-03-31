@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBanner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:text="@string/app_name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    app:fontFamily="sans-serif"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_icon_bandme_foreground"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/segundo_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutBanner"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedUsernameTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    app:errorEnabled="true"
+                    app:errorContentDescription="@string/campo_vacio"
+                    app:endIconMode="clear_text"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconDrawable="@drawable/ic_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvInputPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="30"
+                        android:textColor="@color/color_on_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedPasswordTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/password"
+                    app:errorEnabled="true"
+                    app:endIconMode="password_toggle"
+                    app:counterMaxLength="10"
+                    app:errorContentDescription="@string/campo_vacio"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconDrawable="@drawable/ic_pass">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvInputUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword|textCapWords"
+                        android:maxLength="10"
+                        android:textColor="@color/color_on_primary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="right"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/color_on_primary"
+                    android:textSize="14sp"
+                    app:fontFamily="sans-serif" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textColor="@color/color_on_secondary"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:rippleColor="@color/color_secondary_variant" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Dont_have_an_account"
+                    android:textColor="@color/color_on_primary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/materialButton"
+                    app:layout_constraintStart_toStartOf="@+id/materialButton"
+                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/register"
+                    android:textColor="#f57c00"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/materialButton"
+                    app:layout_constraintStart_toStartOf="@+id/materialButton"
+                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</FrameLayout>

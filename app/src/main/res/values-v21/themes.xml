@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTheme.DayNight." parent="Base.MyTheme">
+        <!--StatusBar y NavigationBar-->
+        <item name="android:statusBarColor">?colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+
+
+
+    </style>
+
+</resources>

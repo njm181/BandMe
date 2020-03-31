@@ -7,6 +7,14 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="Dont_have_an_account">Don\'t have an account?</string>
     <string name="register">Register</string>
+    <string name="campo_vacio">El campo es obligatorio</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="campo_requerido">Requerido</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_member">Already a member?</string>
 
 
 </resources>
