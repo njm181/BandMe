@@ -15,6 +15,11 @@
     <string name="email">Email</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="already_member">Already a member?</string>
+    <string name="welcome_one">Buenos días</string>
+    <string name="buscar">Buscar</string>
+    <string name="perfil">Perfil</string>
+    <string name="buscar_instrumentos">Equipos</string>
+    <string name="premium">Premium</string>
 
 
 </resources>

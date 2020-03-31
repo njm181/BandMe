@@ -29,9 +29,9 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
                     android:text="@string/app_name"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
@@ -201,7 +201,7 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
@@ -229,9 +229,9 @@
                     android:text="@string/already_member"
                     android:textColor="@color/color_on_primary"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/materialButton"
-                    app:layout_constraintStart_toStartOf="@+id/materialButton"
-                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+                    app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+                    app:layout_constraintStart_toStartOf="@+id/btnLogin"
+                    app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvReturnLogin"
@@ -242,9 +242,9 @@
                     android:textColor="#f57c00"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/materialButton"
-                    app:layout_constraintStart_toStartOf="@+id/materialButton"
-                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+                    app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+                    app:layout_constraintStart_toStartOf="@+id/btnLogin"
+                    app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
             </LinearLayout>
 

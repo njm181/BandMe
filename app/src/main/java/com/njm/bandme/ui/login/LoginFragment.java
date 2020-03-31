@@ -12,8 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
+import com.njm.bandme.ui.Home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,8 +23,10 @@ import com.njm.bandme.R;
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
     private MaterialTextView tvRegister;
+    private MaterialButton btnLogin;
     private View view;
     private RegisterFragment registerFragment;
+    private HomeFragment homeFragment;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -38,6 +42,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         setVisualResources(view);
 
         tvRegister.setOnClickListener(this);
+        btnLogin.setOnClickListener(this);
 
         return view;
     }
@@ -45,20 +50,30 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     private void setVisualResources(View view) {
         tvRegister = view.findViewById(R.id.tvRegister);
+        btnLogin = view.findViewById(R.id.btnLogin);
     }
 
 
     @Override
     public void onClick(View v) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         switch (v.getId()){
             case R.id.tvRegister:
                 registerFragment = new RegisterFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
                 fragmentTransaction.replace(R.id.fragment_login_container, registerFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+                break;
+            case R.id.btnLogin:
+                homeFragment = new HomeFragment();
+                fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                fragmentTransaction.replace(R.id.fragment_login_container, homeFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
 
         }
     }
