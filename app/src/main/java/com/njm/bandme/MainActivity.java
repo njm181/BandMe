@@ -6,8 +6,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.njm.bandme.ui.login.LoginFragment;
-import com.njm.bandme.ui.login.RegisterFragment;
+import com.njm.bandme.ui.fragments.login.LoginFragment;
+import com.njm.bandme.ui.fragments.login.RegisterFragment;
 
 public class MainActivity extends AppCompatActivity {
 

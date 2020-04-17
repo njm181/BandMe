@@ -20,6 +20,12 @@
     <string name="perfil">Perfil</string>
     <string name="buscar_instrumentos">Equipos</string>
     <string name="premium">Premium</string>
+    <string name="user_office_example">Guitarrista</string>
+    <string name="user_name_example">Nombre Apellido</string>
+    <string name="user_geoloc_example">Ciudad de Buenos Aires</string>
+    <string name="user_my_content">My Content</string>
+    <string name="user_about_me">About</string>
+    <string name="user_friends_exmaple">Friends</string>
 
 
 </resources>

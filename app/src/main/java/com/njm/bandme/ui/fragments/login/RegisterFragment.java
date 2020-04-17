@@ -1,4 +1,4 @@
-package com.njm.bandme.ui.login;
+package com.njm.bandme.ui.fragments.login;
 
 import android.os.Bundle;
 

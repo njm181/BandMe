@@ -1,9 +1,7 @@
-package com.njm.bandme.ui.login;
+package com.njm.bandme.ui.fragments.login;
 
-import android.content.Context;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,7 +13,7 @@ import android.view.ViewGroup;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
-import com.njm.bandme.ui.Home.HomeFragment;
+import com.njm.bandme.ui.fragments.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
