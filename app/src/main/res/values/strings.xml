@@ -24,8 +24,10 @@
     <string name="user_name_example">Nombre Apellido</string>
     <string name="user_geoloc_example">Ciudad de Buenos Aires</string>
     <string name="user_my_content">My Content</string>
-    <string name="user_about_me">About</string>
+    <string name="user_about_me">About me</string>
     <string name="user_friends_exmaple">Friends</string>
+    <string name="user_about_data">Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised</string>
+    <string name="user_edad">24 Años</string>
 
 
 </resources>
