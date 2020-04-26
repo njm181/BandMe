@@ -124,6 +124,7 @@
                 android:layout_weight="0.33">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSearchUsers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="8dp"
@@ -131,7 +132,8 @@
                     app:cardBackgroundColor="@color/color_cardview"
                     app:rippleColor="@color/color_secondary"
                     app:cardCornerRadius="8dp"
-                    android:elevation="4dp">
+                    android:elevation="4dp"
+                    app:cardElevation="8dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="wrap_content"
@@ -162,25 +164,26 @@
                     android:layout_weight="0.33">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardUserProfile"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="8dp"
                         android:clickable="true"
+                        android:elevation="4dp"
                         app:cardBackgroundColor="@color/color_cardview"
-                        app:rippleColor="@color/color_secondary"
                         app:cardCornerRadius="8dp"
-                        android:elevation="4dp">
+                        app:rippleColor="@color/color_secondary"
+                        app:cardElevation="8dp">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/perfil"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="10dp"
-                            android:textSize="22dp"
-                            app:fontFamily="sans-serif"
+                            android:text="@string/perfil"
                             android:textColor="@color/color_primary_variant"
-                            />
+                            android:textSize="22dp"
+                            app:fontFamily="sans-serif" />
 
                         <ImageView
                             android:id="@+id/imageViewProfile"
@@ -214,7 +217,8 @@
                         app:cardBackgroundColor="@color/color_cardview"
                         app:rippleColor="@color/color_secondary"
                         app:cardCornerRadius="8dp"
-                        android:elevation="4dp">
+                        android:elevation="4dp"
+                        app:cardElevation="8dp">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"
@@ -252,7 +256,8 @@
                         app:rippleColor="@color/color_secondary"
                         app:cardBackgroundColor="@color/color_cardview"
                         app:cardCornerRadius="8dp"
-                        android:elevation="4dp">
+                        android:elevation="4dp"
+                        app:cardElevation="8dp">
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="wrap_content"

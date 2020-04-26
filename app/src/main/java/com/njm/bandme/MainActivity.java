@@ -8,8 +8,10 @@ import android.os.Bundle;
 
 import com.njm.bandme.ui.fragments.login.LoginFragment;
 import com.njm.bandme.ui.fragments.login.RegisterFragment;
+import com.njm.bandme.ui.fragments.profile.FriendsFragment;
+import com.njm.bandme.ui.fragments.profile.dummy.DummyContent;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FriendsFragment.OnListFragmentInteractionListener {
 
 
     private FragmentManager fragmentManager;
@@ -34,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
         loginFragment = new LoginFragment();
         fragmentTransaction.add(R.id.fragment_login_container, loginFragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
     }
 }
