@@ -21,6 +21,13 @@ android {
         }
     }
 
+    flavorDimensions "default"
+    productFlavors{
+        premium{
+            applicationId "com.njm.bandme.premium"
+        }
+    }
+
 }
 
 dependencies {

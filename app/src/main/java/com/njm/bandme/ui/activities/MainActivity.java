@@ -1,4 +1,4 @@
-package com.njm.bandme;
+package com.njm.bandme.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+import com.njm.bandme.R;
 import com.njm.bandme.ui.fragments.login.LoginFragment;
 import com.njm.bandme.ui.fragments.login.RegisterFragment;
 import com.njm.bandme.ui.fragments.profile.FriendsFragment;
