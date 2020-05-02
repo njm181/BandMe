@@ -1,5 +1,6 @@
 package com.njm.bandme.ui.fragments.login;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,19 +10,29 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.home.HomeFragment;
+import com.njm.bandme.ui.views.UserView;
+import com.njm.bandme.utils.BaseApplication;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment implements View.OnClickListener {
+public class LoginFragment extends Fragment {
 
-    private MaterialTextView tvRegister;
-    private MaterialButton btnLogin;
+    private User user;
+
+    @BindView(R.id.tvRegister) MaterialTextView tvRegister;
+    @BindView(R.id.btnLogin) MaterialButton btnLogin;
     private View view;
     private RegisterFragment registerFragment;
     private HomeFragment homeFragment;
@@ -37,23 +48,18 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        setVisualResources(view);
+        ButterKnife.bind(this, view);
 
-        tvRegister.setOnClickListener(this);
-        btnLogin.setOnClickListener(this);
+
+        //tvRegister.setOnClickListener(this);
+        //btnLogin.setOnClickListener(this);
 
         return view;
     }
 
 
-    private void setVisualResources(View view) {
-        tvRegister = view.findViewById(R.id.tvRegister);
-        btnLogin = view.findViewById(R.id.btnLogin);
-    }
-
-
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.btnLogin, R.id.tvRegister})
+    public void onClickAction(View v) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
