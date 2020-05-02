@@ -25,8 +25,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     flavorDimensions "default"
-    productFlavors{
-        premium{
+    productFlavors {
+        premium {
+            applicationId "com.njm.bandme.basic"
             applicationId "com.njm.bandme.premium"
         }
     }
