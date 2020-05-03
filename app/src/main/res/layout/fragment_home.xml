@@ -41,7 +41,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="24dp"
                             android:layout_marginLeft="24dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/welcome_one"
                             android:textColor="@color/color_on_secondary"
                             android:textSize="24dp"
@@ -50,7 +50,7 @@
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/materialTextView2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="24dp"
                             android:text="@string/username"
@@ -73,7 +73,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/ic_icon_bandme_foreground"
+                                app:srcCompat="@drawable/ic_home"
                                 tools:ignore="VectorDrawableCompat" />
 
                             <com.google.android.material.textview.MaterialTextView

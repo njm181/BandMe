@@ -36,6 +36,11 @@
     <string name="instrument_example">Electric Guitar</string>
     <string name="instrument_price_example">$10000</string>
     <string name="alquiler_compra">Alquiler/Comprar</string>
+    <string name="premium_maestro">Premium Maestro\n¡Premium!</string>
+    <string name="acces_premium_description">Accediendo a la versión Premium vas a obtener los siguientes beneficios</string>
+    <string name="sin_publicidad">Vas a navegar por la app super tranqui sin anuncios</string>
+    <string name="mas_vistas">Vas a aparecer en una lista prioritaria de busquedas</string>
+    <string name="lo_quiero">Si si, venga el Premium</string>
 
 
 </resources>

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.google.android.material.card.MaterialCardView;
 import com.njm.bandme.R;
 import com.njm.bandme.ui.fragments.instruments.SearchInstrumentsFragment;
+import com.njm.bandme.ui.fragments.premium.PremiumFragment;
 import com.njm.bandme.ui.fragments.profile.ProfileOptionsFragment;
 import com.njm.bandme.ui.fragments.searchUsers.SearchUserFragment;
 import com.njm.bandme.utils.BaseApplication;
@@ -35,6 +36,7 @@ public class HomeFragment extends Fragment {
     private BaseApplication baseApplication;
     private SearchUserFragment searchUserFragment;
     private SearchInstrumentsFragment searchInstrumentsFragment;
+    private PremiumFragment premiumFragment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -78,6 +80,13 @@ public class HomeFragment extends Fragment {
                 searchInstrumentsFragment = new SearchInstrumentsFragment();
                 fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
                 fragmentTransaction.replace(R.id.fragment_login_container, searchInstrumentsFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
+            case R.id.cardPremium:
+                premiumFragment = new PremiumFragment();
+                fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                fragmentTransaction.replace(R.id.fragment_login_container, premiumFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
