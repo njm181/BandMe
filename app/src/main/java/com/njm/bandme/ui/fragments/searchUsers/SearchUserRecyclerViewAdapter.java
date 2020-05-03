@@ -1,4 +1,4 @@
-package com.njm.bandme.ui.fragments.search;
+package com.njm.bandme.ui.fragments.searchUsers;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.njm.bandme.R;
-import com.njm.bandme.ui.fragments.search.SearchUserFragment.OnListFragmentInteractionListener;
-import com.njm.bandme.ui.fragments.search.dummy.DummyContent.DummyItem;
+import com.njm.bandme.ui.fragments.searchUsers.SearchUserFragmentList.OnListFragmentInteractionListener;
+import com.njm.bandme.ui.fragments.searchUsers.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class SearchUserRecyclerViewAdapter extends RecyclerView.Adapter<SearchUs
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_search_user, parent, false);
+                .inflate(R.layout.fragment_search_user_item, parent, false);
         return new ViewHolder(view);
     }
 

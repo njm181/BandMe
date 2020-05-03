@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.njm.bandme.R;
-import com.njm.bandme.premium.R;
 
 /**
  * A simple {@link Fragment} subclass.

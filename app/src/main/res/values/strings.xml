@@ -31,6 +31,11 @@
     <string name="my_perfil">My Profile</string>
     <string name="friends">Friends</string>
     <string name="search_friends">Search Users</string>
+    <string name="search_instruments">Search Instruments</string>
+    <string name="search">Search</string>
+    <string name="instrument_example">Electric Guitar</string>
+    <string name="instrument_price_example">$10000</string>
+    <string name="alquiler_compra">Alquiler/Comprar</string>
 
 
 </resources>

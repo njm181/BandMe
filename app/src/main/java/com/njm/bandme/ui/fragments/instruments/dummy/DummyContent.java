@@ -1,4 +1,4 @@
-package com.njm.bandme.ui.fragments.search.dummy;
+package com.njm.bandme.ui.fragments.instruments.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

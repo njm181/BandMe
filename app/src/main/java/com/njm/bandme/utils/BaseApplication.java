@@ -1,7 +1,9 @@
 package com.njm.bandme.utils;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 
 public class BaseApplication extends Application {
 
@@ -23,5 +25,10 @@ public class BaseApplication extends Application {
         super.onCreate();
 
         //componentes de Dagger
+    }
+
+    public void changeActivity(Class clase, Context context){
+        Intent intent = new Intent(context, clase);
+        context.startActivity(intent);
     }
 }

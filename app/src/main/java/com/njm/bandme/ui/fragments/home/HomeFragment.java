@@ -1,6 +1,5 @@
 package com.njm.bandme.ui.fragments.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,23 +9,32 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.google.android.material.card.MaterialCardView;
 import com.njm.bandme.R;
-import com.njm.bandme.ui.activities.search.SearchActivity;
-import com.njm.bandme.ui.fragments.profile.ProfileFragment;
+import com.njm.bandme.ui.fragments.instruments.SearchInstrumentsFragment;
 import com.njm.bandme.ui.fragments.profile.ProfileOptionsFragment;
+import com.njm.bandme.ui.fragments.searchUsers.SearchUserFragment;
 import com.njm.bandme.utils.BaseApplication;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class HomeFragment extends Fragment {
 
-    private MaterialCardView materialCardViewProfile, MaterialCardSearchUsers;
+    @BindView(R.id.cardUserProfile) MaterialCardView cardViewProfile;
+    @BindView(R.id.cardSearchUsers) MaterialCardView cardSearchUsers;
+    @BindView(R.id.cardInstruments) MaterialCardView cardInstruments;
+    @BindView(R.id.cardPremium) MaterialCardView cardPremium;
     private View view;
     private ProfileOptionsFragment profileOptionsFragment;
+    private BaseApplication baseApplication;
+    private SearchUserFragment searchUserFragment;
+    private SearchInstrumentsFragment searchInstrumentsFragment;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -39,21 +47,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //abstraer!
-        materialCardViewProfile = view.findViewById(R.id.cardUserProfile);
-        MaterialCardSearchUsers = view.findViewById(R.id.cardSearchUsers);
-        //abstraer!
-        MaterialCardSearchUsers.setOnClickListener(this);
-        materialCardViewProfile.setOnClickListener(this);
+        ButterKnife.bind(this, view);
+
 
 
         return view;
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.cardUserProfile, R.id.cardSearchUsers, R.id.cardPremium, R.id.cardInstruments})
+    public void onClickAction(View v) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        baseApplication = new BaseApplication();
         switch (v.getId()){
             case R.id.cardUserProfile:
                 profileOptionsFragment = new ProfileOptionsFragment();
@@ -63,13 +68,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 fragmentTransaction.commit();
                 break;
             case R.id.cardSearchUsers:
-                /*profileOptionsFragment = new ProfileOptionsFragment();
+                searchUserFragment = new SearchUserFragment();
                 fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
-                fragmentTransaction.replace(R.id.fragment_login_container, profileOptionsFragment);
+                fragmentTransaction.replace(R.id.fragment_login_container, searchUserFragment);
                 fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();*/
-                Intent intent = new Intent(BaseApplication.getContext(), SearchActivity.class);
-                startActivity(intent);
+                fragmentTransaction.commit();
+                break;
+            case R.id.cardInstruments:
+                searchInstrumentsFragment = new SearchInstrumentsFragment();
+                fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                fragmentTransaction.replace(R.id.fragment_login_container, searchInstrumentsFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
 
         }

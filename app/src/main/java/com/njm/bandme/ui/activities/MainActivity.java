@@ -7,12 +7,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.njm.bandme.R;
+import com.njm.bandme.ui.fragments.instruments.instrumentListFragment;
 import com.njm.bandme.ui.fragments.login.LoginFragment;
 import com.njm.bandme.ui.fragments.login.RegisterFragment;
 import com.njm.bandme.ui.fragments.profile.FriendsFragment;
 import com.njm.bandme.ui.fragments.profile.dummy.DummyContent;
 
-public class MainActivity extends AppCompatActivity implements FriendsFragment.OnListFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements FriendsFragment.OnListFragmentInteractionListener,
+        instrumentListFragment.OnListFragmentInteractionListener {
 
 
     private FragmentManager fragmentManager;
@@ -41,6 +43,11 @@ public class MainActivity extends AppCompatActivity implements FriendsFragment.O
 
     @Override
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(com.njm.bandme.ui.fragments.instruments.dummy.DummyContent.DummyItem item) {
 
     }
 }
