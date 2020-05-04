@@ -1,4 +1,4 @@
 package com.njm.bandme.data.services.api;
 
-public interface BandMeApiServices {
+public interface WebServiceBandMe {
 }
