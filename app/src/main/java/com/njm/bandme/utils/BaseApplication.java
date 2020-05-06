@@ -9,6 +9,8 @@ import com.njm.bandme.domain.di.component.BandComponent;
 import com.njm.bandme.domain.di.component.DaggerBandComponent;
 import com.njm.bandme.domain.di.component.DaggerPlacesComponent;
 import com.njm.bandme.domain.di.component.DaggerRetrofitComponent;
+import com.njm.bandme.domain.di.component.DaggerSharedPreferencesComponent;
+import com.njm.bandme.domain.di.component.DaggerUserComponent;
 import com.njm.bandme.domain.di.component.PlacesComponent;
 import com.njm.bandme.domain.di.component.RetrofitComponent;
 import com.njm.bandme.domain.di.component.SharedPreferencesComponent;
