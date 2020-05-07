@@ -10,44 +10,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class RegisterFragment extends Fragment implements View.OnClickListener {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private MaterialTextView tvReturnLogin;
+public class RegisterFragment extends Fragment {
+
+    @BindView(R.id.tvReturnLogin) MaterialTextView tvReturnLogin;
+    @BindView(R.id.tvInputUsername) TextInputEditText tvInputUsername;
+    @BindView(R.id.tvInputEmail) TextInputEditText tvInputEmail;
+    @BindView(R.id.tvInputPassword) TextInputEditText tvInputPassword;
+    @BindView(R.id.tvInputConfirmPassword) TextInputEditText tvInputConfirmPassword;
+    @BindView(R.id.btnRegister) MaterialButton btnRegister;
     private View view;
     private LoginFragment loginFragment;
 
     public RegisterFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_register, container, false);
-
-        setVisualResources(view);
-
-        tvReturnLogin.setOnClickListener(this);
-
+        ButterKnife.bind(this, view);
         return view;
     }
 
-
-    private void setVisualResources(View view) {
-        tvReturnLogin = view.findViewById(R.id.tvReturnLogin);
-    }
-
-
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.tvReturnLogin})
+    public void onClickLogin(View v) {
         switch (v.getId()){
             case R.id.tvReturnLogin:
                 loginFragment = new LoginFragment();

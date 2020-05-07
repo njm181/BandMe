@@ -112,7 +112,7 @@
                     app:startIconDrawable="@drawable/ic_person">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tvInputPassword"
+                        android:id="@+id/tvInputUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName|textCapWords"
@@ -142,7 +142,7 @@
                     app:startIconDrawable="@drawable/ic_pass">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tvInputUsername"
+                        android:id="@+id/tvInputPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword|textCapWords"
@@ -152,6 +152,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvForgotPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

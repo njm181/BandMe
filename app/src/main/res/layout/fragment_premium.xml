@@ -47,7 +47,7 @@
                     android:layout_height="match_parent">
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView5"
+                        android:id="@+id/tvUsernamLastName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -62,7 +62,7 @@
 
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/tvContentUser"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -72,7 +72,7 @@
                         android:textSize="22sp"
                         app:layout_constraintEnd_toEndOf="@id/guideline11"
                         app:layout_constraintStart_toStartOf="@+id/guideline10"
-                        app:layout_constraintTop_toBottomOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/tvUsernamLastName"
                         android:gravity="center_horizontal" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -87,7 +87,7 @@
                         android:textSize="20sp"
                         app:layout_constraintEnd_toStartOf="@+id/guideline11"
                         app:layout_constraintStart_toStartOf="@+id/guideline10"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvContentUser" />
 
                     <ImageView
                         android:layout_width="40dp"
@@ -125,6 +125,7 @@
 
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAcceptPremium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/lo_quiero"

@@ -10,29 +10,25 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
 import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.home.HomeFragment;
-import com.njm.bandme.ui.views.UserView;
-import com.njm.bandme.utils.BaseApplication;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class LoginFragment extends Fragment {
 
     private User user;
 
     @BindView(R.id.tvRegister) MaterialTextView tvRegister;
     @BindView(R.id.btnLogin) MaterialButton btnLogin;
+    @BindView(R.id.tvInputUsername) TextInputEditText tvInputUsername;
+    @BindView(R.id.tvInputPassword) TextInputEditText tvInputPassword;
+    @BindView(R.id.tvInputUsername) TextInputEditText tvForgotPassword;
     private View view;
     private RegisterFragment registerFragment;
     private HomeFragment homeFragment;
@@ -59,7 +55,7 @@ public class LoginFragment extends Fragment {
 
 
     @OnClick({R.id.btnLogin, R.id.tvRegister})
-    public void onClickAction(View v) {
+    public void onClickListener(View v) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 

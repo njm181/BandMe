@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/ivProfileFriend"
+                    android:id="@+id/ivInstrument"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_gravity="right|bottom"
@@ -38,6 +38,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tvDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

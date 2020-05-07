@@ -147,13 +147,13 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvInputSearchInstruments"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:inputType="text|textAutoComplete"
                     android:maxLength="30"
                     android:textColor="@color/color_on_primary"
-                    app:startIconDrawable="@drawable/ic_search"/>
+                    app:startIconDrawable="@drawable/ic_search" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

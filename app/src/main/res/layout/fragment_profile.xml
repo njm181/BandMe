@@ -49,7 +49,7 @@
                        android:layout_height="match_parent">
 
                        <TextView
-                           android:id="@+id/textView4"
+                           android:id="@+id/tvOffice"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginLeft="4dp"
@@ -62,7 +62,7 @@
                            app:layout_constraintTop_toTopOf="parent" />
 
                        <TextView
-                           android:id="@+id/textView5"
+                           android:id="@+id/tvUsernamLastName"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/user_name_example"
@@ -73,27 +73,27 @@
                            app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
                        <TextView
-                           android:id="@+id/textView9"
+                           android:id="@+id/tvEdadUser"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="4dp"
                            android:text="@string/user_edad"
                            android:textColor="@color/color_on_primary"
                            android:textSize="18dp"
-                           app:layout_constraintEnd_toEndOf="@+id/textView5"
-                           app:layout_constraintStart_toStartOf="@+id/textView5"
-                           app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                           app:layout_constraintEnd_toEndOf="@+id/tvUsernamLastName"
+                           app:layout_constraintStart_toStartOf="@+id/tvUsernamLastName"
+                           app:layout_constraintTop_toBottomOf="@+id/tvUsernamLastName" />
 
                        <TextView
-                           android:id="@+id/textView6"
+                           android:id="@+id/tvCiudad"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="4dp"
                            android:text="@string/user_geoloc_example"
                            android:textColor="@android:color/darker_gray"
-                           app:layout_constraintEnd_toEndOf="@+id/textView5"
-                           app:layout_constraintStart_toStartOf="@+id/textView5"
-                           app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                           app:layout_constraintEnd_toEndOf="@+id/tvUsernamLastName"
+                           app:layout_constraintStart_toStartOf="@+id/tvUsernamLastName"
+                           app:layout_constraintTop_toBottomOf="@+id/tvEdadUser" />
 
                        <RatingBar
                            android:id="@+id/ratingBar"
@@ -102,9 +102,9 @@
                            android:progressBackgroundTint="@color/color_primary"
                            android:scaleX="0.5"
                            android:scaleY="0.5"
-                           app:layout_constraintEnd_toEndOf="@+id/textView6"
-                           app:layout_constraintStart_toStartOf="@+id/textView6"
-                           app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                           app:layout_constraintEnd_toEndOf="@+id/tvCiudad"
+                           app:layout_constraintStart_toStartOf="@+id/tvCiudad"
+                           app:layout_constraintTop_toBottomOf="@+id/tvCiudad" />
 
 
                        <ImageView
@@ -167,7 +167,7 @@
 
 
                        <TextView
-                           android:id="@+id/textView8"
+                           android:id="@+id/tvContentUser"
                            android:layout_width="0dp"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="4dp"
@@ -181,7 +181,7 @@
                            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                           android:id="@+id/floatingActionButton"
+                           android:id="@+id/btnPhone"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginTop="16dp"
@@ -189,33 +189,33 @@
                            android:src="@drawable/ic_phone_"
                            app:backgroundTint="@color/color_primary"
                            app:layout_constraintBottom_toBottomOf="parent"
-                           app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
+                           app:layout_constraintEnd_toStartOf="@+id/btnEdit"
                            app:layout_constraintStart_toStartOf="@+id/guideline10"
-                           app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                           app:layout_constraintTop_toBottomOf="@+id/tvContentUser" />
 
                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                           android:id="@+id/floatingActionButton2"
+                           android:id="@+id/btnEmail"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:clickable="true"
                            android:src="@drawable/ic_edit"
                            app:backgroundTint="@color/color_primary"
-                           app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+                           app:layout_constraintBottom_toBottomOf="@+id/btnPhone"
                            app:layout_constraintEnd_toStartOf="@+id/guideline11"
-                           app:layout_constraintStart_toEndOf="@+id/floatingActionButton3"
-                           app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+                           app:layout_constraintStart_toEndOf="@+id/btnEdit"
+                           app:layout_constraintTop_toTopOf="@+id/btnPhone" />
 
                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                           android:id="@+id/floatingActionButton3"
+                           android:id="@+id/btnEdit"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:clickable="true"
                            android:src="@drawable/ic_email"
                            app:backgroundTint="@color/color_primary"
-                           app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+                           app:layout_constraintBottom_toBottomOf="@+id/btnPhone"
                            app:layout_constraintEnd_toEndOf="parent"
                            app:layout_constraintStart_toStartOf="parent"
-                           app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+                           app:layout_constraintTop_toTopOf="@+id/btnPhone" />
 
                        <androidx.constraintlayout.widget.Guideline
                            android:id="@+id/guideline6"

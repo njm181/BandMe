@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.njm.bandme.R;
@@ -12,6 +13,9 @@ import com.njm.bandme.ui.fragments.instruments.instrumentListFragment.OnListFrag
 import com.njm.bandme.ui.fragments.instruments.dummy.DummyContent.DummyItem;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
@@ -60,20 +64,19 @@ public class InstrumentRecyclerViewAdapter extends RecyclerView.Adapter<Instrume
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-       // public final TextView mIdView;
-        public final TextView mContentView;
+        @BindView(R.id.ivInstrument) ImageView ivInstrument;
+        @BindView(R.id.tvDescripcion) TextView tvDescripcion;
         public DummyItem mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-           // mIdView = (TextView) view.findViewById(R.id.item_number);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            ButterKnife.bind(this, view);
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + tvDescripcion.getText() + "'";
         }
     }
 }
