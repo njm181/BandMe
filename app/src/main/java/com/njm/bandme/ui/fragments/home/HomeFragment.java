@@ -22,9 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class HomeFragment extends Fragment {
 
     @BindView(R.id.cardUserProfile) MaterialCardView cardViewProfile;

@@ -5,13 +5,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
 import com.njm.bandme.ui.fragments.searchUsers.SearchUserFragmentList.OnListFragmentInteractionListener;
 import com.njm.bandme.ui.fragments.searchUsers.dummy.DummyContent.DummyItem;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
@@ -60,20 +66,25 @@ public class SearchUserRecyclerViewAdapter extends RecyclerView.Adapter<SearchUs
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-       // public final TextView mIdView;
-        public final TextView mContentView;
+        @BindView(R.id.ivProfileFriend)
+        ImageView ivProfileFriend;
+        @BindView(R.id.tvNameFriend)
+        MaterialTextView tvNameFriend;
+        @BindView(R.id.tvOfficeFriend)
+        MaterialTextView tvOfficeFriend;
+        @BindView(R.id.cardFriend)
+        MaterialCardView cardFriend;
         public DummyItem mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            //mIdView = (TextView) view.findViewById(R.id.item_number);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            ButterKnife.bind(this, view);
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + tvNameFriend.getText() + "'";
         }
     }
 }

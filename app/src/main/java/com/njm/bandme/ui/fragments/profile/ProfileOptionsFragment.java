@@ -16,12 +16,17 @@ import com.njm.bandme.R;
 import com.njm.bandme.ui.activities.profile.FriendsActivity;
 import com.njm.bandme.utils.BaseApplication;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfileOptionsFragment extends Fragment implements View.OnClickListener {
+public class ProfileOptionsFragment extends Fragment{
 
-    private MaterialCardView materialCardViewFriends, materialCardMyProfile;
+    @BindView(R.id.cardMyProfile) MaterialCardView materialCardViewFriends;
+    @BindView(R.id.cardFriends) MaterialCardView materialCardMyProfile;
     private View view;
     private FriendsFragment friendsFragment;
     private ProfileFragment profileFragment;
@@ -37,18 +42,14 @@ public class ProfileOptionsFragment extends Fragment implements View.OnClickList
 
         view = inflater.inflate(R.layout.fragment_profile_options, container, false);
 
-        //abstraer!
-        materialCardViewFriends = view.findViewById(R.id.cardFriends);
-        materialCardMyProfile = view.findViewById(R.id.cardMyProfile);
+        ButterKnife.bind(this, view);
 
-        materialCardViewFriends.setOnClickListener(this);
-        materialCardMyProfile.setOnClickListener(this);
 
         return view;
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.cardMyProfile, R.id.cardFriends})
+    public void onClickAction(View v) {
         FragmentManager fragmentManager = getFragmentManager(); //abstraer!
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();//abstraer!
         switch (v.getId()){
