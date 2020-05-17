@@ -28,7 +28,6 @@ public class LoginFragment extends Fragment {
     @BindView(R.id.btnLogin) MaterialButton btnLogin;
     @BindView(R.id.tvInputUsername) TextInputEditText tvInputUsername;
     @BindView(R.id.tvInputPassword) TextInputEditText tvInputPassword;
-    @BindView(R.id.tvInputUsername) TextInputEditText tvForgotPassword;
     private View view;
     private RegisterFragment registerFragment;
     private HomeFragment homeFragment;

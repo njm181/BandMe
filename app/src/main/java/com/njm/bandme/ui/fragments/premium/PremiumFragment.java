@@ -35,7 +35,7 @@ public class PremiumFragment extends Fragment {
     }
 
     @OnClick({R.id.btnAcceptPremium})
-    private void onClickAcceptPremiun(){
+    public void onClickAcceptPremiun(){
         //redirect to page
     }
 }
