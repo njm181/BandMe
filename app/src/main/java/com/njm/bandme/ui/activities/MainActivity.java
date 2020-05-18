@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.Instrument;
+import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.instruments.instrumentListFragment;
 import com.njm.bandme.ui.fragments.login.LoginFragment;
 import com.njm.bandme.ui.fragments.login.RegisterFragment;
@@ -42,12 +44,12 @@ public class MainActivity extends AppCompatActivity implements FriendsFragment.O
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(User item) {
 
     }
 
     @Override
-    public void onListFragmentInteraction(com.njm.bandme.ui.fragments.instruments.dummy.DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(Instrument item) {
 
     }
 }

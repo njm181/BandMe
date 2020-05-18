@@ -11,8 +11,8 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.profile.FriendsFragment.OnListFragmentInteractionListener;
-import com.njm.bandme.ui.fragments.profile.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -21,10 +21,10 @@ import butterknife.ButterKnife;
 
 public class FriendsRecyclerViewAdapter extends RecyclerView.Adapter<FriendsRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<User> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public FriendsRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public FriendsRecyclerViewAdapter(List<User> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -61,7 +61,7 @@ public class FriendsRecyclerViewAdapter extends RecyclerView.Adapter<FriendsRecy
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public DummyItem mItem;
+        public User mItem;
         @BindView(R.id.ivProfileFriend) ImageView ivProfileFriend;
         @BindView(R.id.tvNameFriend) MaterialTextView tvNameFriend;
         @BindView(R.id.tvOfficeFriend) MaterialTextView tvOfficeFriend;

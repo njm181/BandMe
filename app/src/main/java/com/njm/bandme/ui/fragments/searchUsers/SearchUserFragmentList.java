@@ -13,26 +13,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.njm.bandme.R;
-import com.njm.bandme.ui.fragments.searchUsers.dummy.DummyContent;
-import com.njm.bandme.ui.fragments.searchUsers.dummy.DummyContent.DummyItem;
+import com.njm.bandme.domain.entities.User;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
- */
+import java.util.ArrayList;
+
+
 public class SearchUserFragmentList extends Fragment {
 
-    // TODO: Customize parameters
     private int mColumnCount = 1;
 
     private OnListFragmentInteractionListener mListener;
+    private ArrayList<User> usersList;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+
     public SearchUserFragmentList() {
     }
 
@@ -56,7 +49,7 @@ public class SearchUserFragmentList extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new SearchUserRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new SearchUserRecyclerViewAdapter(usersList, mListener));
         }
         return view;
     }
@@ -91,6 +84,6 @@ public class SearchUserFragmentList extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(User item);
     }
 }

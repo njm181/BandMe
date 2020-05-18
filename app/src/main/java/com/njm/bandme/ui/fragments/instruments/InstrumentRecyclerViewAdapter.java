@@ -9,25 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.Instrument;
 import com.njm.bandme.ui.fragments.instruments.instrumentListFragment.OnListFragmentInteractionListener;
-import com.njm.bandme.ui.fragments.instruments.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class InstrumentRecyclerViewAdapter extends RecyclerView.Adapter<InstrumentRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Instrument> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public InstrumentRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public InstrumentRecyclerViewAdapter(List<Instrument> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -66,7 +61,7 @@ public class InstrumentRecyclerViewAdapter extends RecyclerView.Adapter<Instrume
         public final View mView;
         @BindView(R.id.ivInstrument) ImageView ivInstrument;
         @BindView(R.id.tvDescripcion) TextView tvDescripcion;
-        public DummyItem mItem;
+        public Instrument mItem;
 
         public ViewHolder(View view) {
             super(view);

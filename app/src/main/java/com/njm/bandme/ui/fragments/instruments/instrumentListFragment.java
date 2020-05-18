@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -13,28 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.njm.bandme.R;
-import com.njm.bandme.ui.fragments.instruments.dummy.DummyContent;
-import com.njm.bandme.ui.fragments.instruments.dummy.DummyContent.DummyItem;
+import com.njm.bandme.domain.entities.Instrument;
 
-import java.util.List;
+import java.util.ArrayList;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
- */
 public class instrumentListFragment extends Fragment {
 
-    // TODO: Customize parameters
     private int mColumnCount = 1;
 
     private OnListFragmentInteractionListener mListener;
+    private ArrayList<Instrument> InstrumentsList;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public instrumentListFragment() {
     }
 
@@ -54,7 +42,7 @@ public class instrumentListFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
                 recyclerView.setLayoutManager(new GridLayoutManager(context, 2));
-            recyclerView.setAdapter(new InstrumentRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new InstrumentRecyclerViewAdapter(InstrumentsList, mListener));
         }
         return view;
     }
@@ -89,6 +77,6 @@ public class instrumentListFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Instrument item);
     }
 }

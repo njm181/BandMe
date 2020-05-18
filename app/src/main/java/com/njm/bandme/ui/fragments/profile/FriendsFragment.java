@@ -13,29 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.njm.bandme.R;
-import com.njm.bandme.ui.fragments.profile.dummy.DummyContent;
-import com.njm.bandme.ui.fragments.profile.dummy.DummyContent.DummyItem;
+import com.njm.bandme.domain.entities.User;
 
-import java.util.List;
+import java.util.ArrayList;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
- */
 public class FriendsFragment extends Fragment {
 
-    // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+    private ArrayList<User> friendsList;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public FriendsFragment() {
     }
 
@@ -72,7 +60,7 @@ public class FriendsFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new FriendsRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new FriendsRecyclerViewAdapter(friendsList, mListener));
         }
         return view;
     }
@@ -107,6 +95,6 @@ public class FriendsFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(User item);
     }
 }

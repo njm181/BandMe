@@ -11,25 +11,20 @@ import android.widget.TextView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.searchUsers.SearchUserFragmentList.OnListFragmentInteractionListener;
-import com.njm.bandme.ui.fragments.searchUsers.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
 public class SearchUserRecyclerViewAdapter extends RecyclerView.Adapter<SearchUserRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<User> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public SearchUserRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public SearchUserRecyclerViewAdapter(List<User> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -74,7 +69,7 @@ public class SearchUserRecyclerViewAdapter extends RecyclerView.Adapter<SearchUs
         MaterialTextView tvOfficeFriend;
         @BindView(R.id.cardFriend)
         MaterialCardView cardFriend;
-        public DummyItem mItem;
+        public User mItem;
 
         public ViewHolder(View view) {
             super(view);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.njm.bandme.R;
+import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.profile.FriendsFragment;
 import com.njm.bandme.ui.fragments.profile.dummy.DummyContent;
 
@@ -17,7 +18,7 @@ public class FriendsActivity extends AppCompatActivity implements FriendsFragmen
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(User item) {
 
     }
 }
