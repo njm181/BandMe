@@ -7,8 +7,6 @@ import android.os.Bundle;
 import com.njm.bandme.R;
 import com.njm.bandme.domain.entities.User;
 import com.njm.bandme.ui.fragments.profile.FriendsFragment;
-import com.njm.bandme.ui.fragments.profile.dummy.DummyContent;
-
 public class FriendsActivity extends AppCompatActivity implements FriendsFragment.OnListFragmentInteractionListener {
 
     @Override

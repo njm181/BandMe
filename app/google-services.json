@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1068634017705",
+    "firebase_url": "https://bandme-43589.firebaseio.com",
+    "project_id": "bandme-43589",
+    "storage_bucket": "bandme-43589.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068634017705:android:efc3e370ea311b99f73eb8",
+        "android_client_info": {
+          "package_name": "com.njm.bandme.premium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068634017705-tmfqs47v4crumkld10ffn5j28pf9uacb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.njm.bandme.premium",
+            "certificate_hash": "7fe4d040910f15e77984fd027c4fba11f3026f69"
+          }
+        },
+        {
+          "client_id": "1068634017705-vbo8gvn7gpj93ef1noandl80li233h8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADuNTGiQauM9w5F-l1zOZbwR8XiG0Vf5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068634017705-vbo8gvn7gpj93ef1noandl80li233h8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
